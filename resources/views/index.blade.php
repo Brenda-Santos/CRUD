@@ -5,7 +5,7 @@
     <h1 class="text-center mt-3">Livraria</h1>
 
     <div class='text-center mt-4 mb-4'>
-        <a href=''>
+        <a href="{{url("books/create")}}">
             <button class='btn btn-success'>Cadastrar</button>    
         </a>
          
@@ -38,7 +38,7 @@
                     <a href="{{url("books/$books->id")}}">
                         <button class='btn btn-dark'>Visualizar</button>
                     </a>
-                    <a href=''>
+                    <a href="">
                         <button class='btn btn-primary'>Editar</button>
                     </a>
                     <a href=''>
