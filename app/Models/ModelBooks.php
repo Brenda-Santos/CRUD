@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class ModelBooks extends Model
 {
     protected $table='book';
+
+    public function relUsers()
+    {
+        return $this->hasOne('App\User','id','id_user');
+    }
 }
