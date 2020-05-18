@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1 class="text-center">CRUD</h1>
+    <h1 class="text-center mt-3">Livraria</h1>
 
     <div class='text-center mt-4 mb-4'>
         <a href=''>
@@ -25,7 +25,7 @@
         </thead>
         <tbody>
 
-        @foreach($book as $books);
+        @foreach($book as $books)
             @php
                 $user=$books->find($books->id)->relUsers;
             @endphp
@@ -35,7 +35,7 @@
                 <td>{{$user->name}}</td>
                 <td>{{$books->price}}</td>
                 <td>
-                    <a href=''>
+                    <a href="{{url("books/$books->id")}}">
                         <button class='btn btn-dark'>Visualizar</button>
                     </a>
                     <a href=''>
